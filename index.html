@@ -20,18 +20,11 @@
                     TRACKER
                 </a>
                 <div class="form-inline  onsubmit="getInpuValue()" style="right: 0">
-                  <input id="myInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="width: 18vw">
-                  <button id="myButton" class="btn btn-outline-success my-2 my-sm-0" style="border-color: rgb(106, 168, 79)!important" type="button" onsubmit="getInpuValue()" onclick="getInputValue()">Search</button>
+                  <input id="myInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  <button id="myButton" class="btn btn-outline-success my-2 my-sm-0" style="border-color: rgb(106, 168, 79)!important" type="button" onsubmit="getInpuValue()" onclick="getInputValue()"><i class="fas fa-search"></i></button>
                 </div>
               </nav>
-              <div id="dataPanel" class="card" style="width: 18rem; display: none; position: fixed; z-index: 99; width: 25vw; height: 100vh; right: 0">
-                <img src="http://pueblosconencanto.net/wp-content/uploads/11-04-Frias-castillo-y-casas-colgadas.jpg" class="card-img-top" alt="...">
-                <div id="data" class="card-body">
-                </div>
-                <div class="col text-center">
-                    <button id="closeButton" class="btn btn-success my-2 my-sm-0" style="width:100%; border-color: rgb(106, 168, 79)!important; background-color: rgb(106, 168, 79)!important" type="button" onsubmit="closePanel()" onclick="closePanel()">Close</button>
-                </div>
-            </div>
+              
 
 <div id="map" style="width: 100vw; height: 100vh; background: grey" />
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
@@ -72,12 +65,14 @@
   {
       event.preventDefault();
       document.getElementById("myButton").click();
+      document.getElementById("myInput").blur();
   }
 })
 function getInputValue()
 {
   query = document.getElementById("myInput").value;
   document.getElementById("myInput").value = "";
+  document.getElementById("myInput").blur();
   setLocation(query);
 }
 
