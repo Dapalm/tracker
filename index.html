@@ -15,15 +15,15 @@
     </head>
     <body>
         <nav class="navbar navbar-light bg-light " style="position:fixed; z-index: 100; width: 100vw;">
-                
-                <a class="navbar-brand">
-                    TRACKER
-                </a>
-                <div class="form-inline  onsubmit="getInpuValue()" style="right: 0">
-                  <input id="myInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <div class="form-inline ml-auto"  onsubmit="getInpuValue()">
+                  <div class="col-xm-11">
+                    <input id="myInput" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                  </div>
+                  <div class="col-xm-1">
                   <button id="myButton" class="btn btn-outline-success my-2 my-sm-0" style="border-color: rgb(106, 168, 79)!important" type="button" onsubmit="getInpuValue()" onclick="getInputValue()"><i class="fas fa-search"></i></button>
                 </div>
-              </nav>
+                </div>
+        </nav>
               
 
 <div id="map" style="width: 100vw; height: 100vh; background: grey" />
